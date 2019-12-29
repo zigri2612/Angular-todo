@@ -55,4 +55,20 @@ invalidLogin = false
       )
     }
     
+    hadleJWTAuthLogin(){
+        this.basicAuthenticatedService.executeJWTAuthenticationService(this.username,this.password)
+        .subscribe(
+            data => {
+              console.log(data)
+              this.router.navigate(['welcome',this.username])
+              this.invalidLogin=false
+              console.log('Login successful')
+            },
+            error => {
+              console.log(error)
+              this.invalidLogin=true
+            }
+        )
+      }
+
 }
