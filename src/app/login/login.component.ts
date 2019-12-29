@@ -46,6 +46,7 @@ invalidLogin = false
             console.log(data)
             this.router.navigate(['welcome',this.username])
             this.invalidLogin=false
+            console.log('Login successful')
           },
           error => {
             console.log(error)
