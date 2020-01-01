@@ -36,7 +36,7 @@ welcomeMessageFromService:string
     //COMPILATION ERROR this.message = 5
     //console.log(this.message);
     //this.route.snapshot.params['name']
-    this.name=this.route.snapshot.params['name'];
+    this.name=this.route.snapshot.params['name']; 
     console.log(this.name);
   }
 
